@@ -1,5 +1,6 @@
 package com.pluralsight.order.util;
 
+import java.lang.constant.Constable;
 import java.sql.SQLException;
 
 /**
@@ -12,6 +13,7 @@ public class ExceptionHandler {
      * @param sqlException Exception from which information will be extracted
      */
     public static void handleException(SQLException sqlException) {
-
+        System.out.println(sqlException.getErrorCode() + " " + sqlException.getSQLState() + " " +  sqlException.getMessage());
+        sqlException.printStackTrace();
     }
 }
